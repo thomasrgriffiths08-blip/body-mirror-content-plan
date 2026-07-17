@@ -154,8 +154,27 @@
   .foot{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
   .reset{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:6px;padding:6px 12px;font-size:13px;cursor:pointer;font-family:var(--body)}
 
+  /* ------- interactive bits ------- */
+  .progress{height:6px;background:var(--soft);border:1px solid var(--line);border-radius:99px;margin-top:10px;overflow:hidden;max-width:340px}
+  .progress i{display:block;height:100%;width:0;background:var(--hl);transition:width .4s}
+  .toast{position:fixed;left:50%;transform:translateX(-50%) translateY(20px);bottom:76px;z-index:80;background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:8px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:88vw;text-align:center}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.5)}100%{transform:scale(1)}}
+  .box2.pop{animation:pop .3s}
+  @media (prefers-reduced-motion:reduce){.box2.pop{animation:none}.progress i{transition:none}}
+  .packbtns{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+  .packbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:7px 12px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:var(--body);display:flex;align-items:center;gap:7px}
+  .packbtn:hover{border-color:var(--ink)}
+  .packbtn u{text-decoration:none;font-size:11.5px;font-weight:800;background:var(--hl-soft);color:var(--ink);border-radius:4px;padding:1.5px 6px;font-variant-numeric:tabular-nums}
+  .packbtn[disabled]{opacity:.45;cursor:default}
+  .fab-badge{background:var(--hl-soft);color:var(--ink);border-radius:5px;padding:2px 7px;font-size:12.5px;font-weight:800;margin-left:7px;font-variant-numeric:tabular-nums}
+  .fab-sub{display:block;font-size:11px;font-weight:400;color:var(--bg);opacity:.75;margin-top:1px}
+  .fab-nudge{position:fixed;right:16px;bottom:76px;z-index:59;max-width:250px;background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:10px 13px;font-size:13.5px;box-shadow:0 4px 14px rgba(0,0,0,.15);display:none;cursor:pointer}
+  .fab-nudge.show{display:block}
+  .fab-nudge small{display:block;color:var(--muted);margin-top:3px}
+
   /* ------- ideas chat ------- */
-  .fab{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--ink);color:var(--bg);border:none;border-radius:8px;padding:12px 18px;font-size:14.5px;font-weight:700;font-family:var(--body);cursor:pointer}
+  .fab{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--ink);color:var(--bg);border:none;border-radius:8px;padding:11px 17px;font-size:14.5px;font-weight:700;font-family:var(--body);cursor:pointer;text-align:left}
   .sheet{position:fixed;inset:0;z-index:70;display:none;background:rgba(0,0,0,.4)}
   .sheet.open{display:block}
   .panel{position:absolute;right:0;bottom:0;left:0;top:8%;background:var(--bg);border-radius:12px 12px 0 0;display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line)}
@@ -198,8 +217,9 @@
       <span><b>66</b> ideas</span>
       <span><b>198</b> hooks</span>
       <span><b>12</b> weeks + extras</span>
-      <span><b id="filmedCount">0</b> filmed</span>
+      <span><b id="filmedCount">0</b>/66 filmed</span>
     </div>
+    <div class="progress" aria-hidden="true"><i id="progFill"></i></div>
 
     <div class="box">
       <h3>Before you film anything</h3>
@@ -226,7 +246,7 @@
         <li><b>Copy</b> next to a hook copies it for your caption or notes.</li>
         <li>Tick <b>Filmed</b> when one's done. It fades out so you can see what's left.</li>
         <li>Filter by <b>app</b>, <b>audience</b> or <b>effort</b>. The <b>Extras</b> tab is a spare pile for any week.</li>
-        <li>Stuck? Open <b>More ideas</b> (bottom right). It holds 100+ spares including a whole no-face-needed pack, and it never repeats itself.</li>
+        <li>Stuck? Hit <b>More ideas</b> (bottom right). The number on it is how many spare ideas, hooks and captions are left in the pile. It deals three at a time and never repeats one.</li>
       </ul>
     </div>
 
@@ -324,13 +344,21 @@
   <main id="plan"></main>
   <p class="empty" id="empty" hidden>Nothing matches those filters. Widen them a bit.</p>
 
+  <div class="box">
+    <h3>Run out of ideas? There's a whole spare pile</h3>
+    <p style="margin:0 0 2px;font-size:13.5px;color:var(--muted)">The chat in the corner hands out extra video ideas, hooks and captions. It never gives the same one twice, ever. The numbers show how many are left in each pack. Tap one and it'll deal you three.</p>
+    <div class="packbtns" id="packBtns"></div>
+  </div>
+
   <div class="foot">
     <span>Edits and ticks save on your own phone only. Body Mirror AI, content plan v4</span>
     <button class="reset" id="resetBtn">Reset my edits &amp; ticks</button>
   </div>
 </div>
 
-<button class="fab" id="fabBtn" aria-label="Open the ideas chat">More ideas</button>
+<button class="fab" id="fabBtn" aria-label="Open the ideas chat">More ideas <span class="fab-badge" id="fabCount"></span><span class="fab-sub">spare hooks &amp; ideas, tap to draw</span></button>
+<div class="fab-nudge" id="fabNudge" role="note"><b>100+ spare ideas live in this button</b><small>extra hooks, captions and video ideas. it never hands out the same one twice. the number is how many are left.</small></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Ideas chat">
   <div class="panel">
@@ -952,6 +980,7 @@ function buildPlan(){
 function updateFilmedCount(){
  const filmed=store.get("filmed",[]);
  document.getElementById("filmedCount").textContent=filmed.length;
+ document.getElementById("progFill").style.width=Math.round(filmed.length/PLAN.length*100)+"%";
  document.querySelectorAll("[data-mprog]").forEach(el=>{
    const m=+el.dataset.mprog;
    const tot=PLAN.filter(x=>x.m===m).length;
@@ -959,6 +988,16 @@ function updateFilmedCount(){
    el.textContent=`${done}/${tot} filmed`;
  });
 }
+
+/* toasts + milestones */
+let toastTimer=null;
+function showToast(msg){
+ const t=document.getElementById("toast");
+ t.textContent=msg;t.classList.add("show");
+ clearTimeout(toastTimer);
+ toastTimer=setTimeout(()=>t.classList.remove("show"),2400);
+}
+const MILESTONES={1:"first one filmed. off you go",5:"5 filmed, that's a posting week sorted",10:"10 filmed. you're a content machine now",20:"20 filmed. nearly a third of the plan",33:"33 of 66. officially halfway",50:"50 filmed. genuinely impressive",66:"all 66 filmed. absolute legends, start month four"};
 
 function applyFilters(){
  let shown=0;
@@ -1041,7 +1080,12 @@ planEl.addEventListener("click",e=>{
    const card=fb.closest(".card");const id=card.dataset.id;
    let filmed=store.get("filmed",[]);
    if(filmed.includes(id)){filmed=filmed.filter(x=>x!==id);card.classList.remove("filmed");fb.querySelector(".box2").textContent="";}
-   else{filmed.push(id);card.classList.add("filmed");fb.querySelector(".box2").textContent="✓";}
+   else{
+     filmed.push(id);card.classList.add("filmed");
+     const box=fb.querySelector(".box2");box.textContent="✓";
+     box.classList.add("pop");setTimeout(()=>box.classList.remove("pop"),350);
+     if(MILESTONES[filmed.length])showToast(MILESTONES[filmed.length]);
+   }
    store.set("filmed",filmed);
    updateFilmedCount();
  }
@@ -1126,6 +1170,22 @@ function serve(bank,n){
  return pick.map(i=>BANKS[bank][i]);
 }
 function remaining(bank){return BANKS[bank].length-store.get("used-"+bank,[]).length}
+function sparesLeft(){return Object.keys(BANKS).reduce((n,b)=>n+remaining(b),0)}
+
+/* spares counter + pack buttons */
+const PACKS=[["Video ideas","ideas"],["Low-effort (no face)","easy"],["Hook formulas","hookFx"],["Beginner hooks","hooksBeg"],["Lifter hooks","hooksLift"],["Transformation hooks","hooksTrans"],["Trend formats","formats"],["Captions & CTAs","captions"]];
+function updateSpares(){
+ document.getElementById("fabCount").textContent=sparesLeft()+" left";
+ document.getElementById("packBtns").innerHTML=PACKS.map(([label,key])=>{
+   const rem=remaining(key);
+   return `<button class="packbtn" data-pack="${key}" ${rem?"":"disabled"}>${label} <u>${rem?rem+" left":"all used"}</u></button>`;
+ }).join("")+`<button class="packbtn" data-pack="surprise">Surprise me <u>?</u></button>`;
+}
+document.getElementById("packBtns").addEventListener("click",e=>{
+ const b=e.target.closest("[data-pack]");if(!b||b.disabled)return;
+ openChat();
+ setTimeout(()=>botReply(b.dataset.pack),200);
+});
 
 const BANK_LABEL={ideas:"video ideas",easy:"low-effort ideas",hookFx:"hook formulas",hooksBeg:"beginner hooks",hooksLift:"lifter hooks",hooksTrans:"transformation hooks",formats:"trend formats",captions:"captions & CTAs"};
 const DRY={
@@ -1164,6 +1224,7 @@ function botReply(bank){
    items.forEach(it=>addIdeaCard(it,bank));
    const rem=remaining(bank);
    addMsg(rem>0?`(${rem} more ${BANK_LABEL[bank]} left in this pack, I never repeat one.)`:`(That was the last of the ${BANK_LABEL[bank]}. All served, none repeated.)`,"bot");
+   updateSpares();
  },650);
 }
 
@@ -1209,18 +1270,30 @@ document.getElementById("sendBtn").addEventListener("click",sendTyped);
 chatIn.addEventListener("keydown",e=>{if(e.key==="Enter")sendTyped()});
 
 let greeted=false;
-document.getElementById("fabBtn").addEventListener("click",()=>{
+function openChat(){
+ hideNudge();
  sheet.classList.add("open");
  if(!greeted){
    greeted=true;
-   setTimeout(()=>addMsg("Alright. I've got 100+ spare ideas, hooks, formats and captions back here, including a whole pack that needs no face on camera. I never hand out the same one twice, even if you come back next week. What do you need?","bot"),250);
+   setTimeout(()=>addMsg(`Alright. I'm holding ${sparesLeft()} spare ideas, hooks, formats and captions, including a whole pack that needs no face on camera. I never hand out the same one twice, even if you come back next week. Tap a pack below or just ask.`,"bot"),250);
  }
  setTimeout(()=>chatIn.focus(),300);
-});
+}
+document.getElementById("fabBtn").addEventListener("click",openChat);
+
+/* one-time nudge bubble */
+const nudgeEl=document.getElementById("fabNudge");
+function hideNudge(){nudgeEl.classList.remove("show");store.set("nudge-seen",true);}
+nudgeEl.addEventListener("click",()=>{openChat();});
+if(!store.get("nudge-seen",false)){
+ setTimeout(()=>{if(!store.get("nudge-seen",false))nudgeEl.classList.add("show")},2500);
+ setTimeout(()=>nudgeEl.classList.remove("show"),16000);
+}
 document.getElementById("closeBtn").addEventListener("click",()=>sheet.classList.remove("open"));
 sheet.addEventListener("click",e=>{if(e.target===sheet)sheet.classList.remove("open")});
 
 buildPlan();
+updateSpares();
 </script>
 
 </body>
