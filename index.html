@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Body Mirror AI — 12-Week Content Plan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Body Mirror AI — 12-week social content plan with hooks, platform labels and an idea coach.">
+</head>
+<body>
+<style>
+  :root{
+    --bg:#F5F8F9; --surface:#FFFFFF; --ink:#15242C; --muted:#5C6E78; --line:#E2E9EC;
+    --accent:#0E9AA7; --accent-soft:#E0F2F4; --accent-ink:#0B7580;
+    --tt:#15242C; --tt-bg:#EAEEF0; --ig:#C13584; --ig-bg:#FBEAF3; --fb:#1877F2; --fb-bg:#E7F0FE;
+    --good:#2E9E5B; --good-bg:#E6F4EC; --warn:#A8720F; --warn-bg:#F8EED9;
+    --shadow:0 1px 3px rgba(21,36,44,.07), 0 6px 20px rgba(21,36,44,.05);
+    --r:14px;
+    --display:ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0D1519; --surface:#16222A; --ink:#E7EEF1; --muted:#93A6AF; --line:#243540;
+      --accent:#2BC5CF; --accent-soft:#123B41; --accent-ink:#7FDDE4;
+      --tt:#E7EEF1; --tt-bg:#243540; --ig:#F06CB4; --ig-bg:#3B1F30; --fb:#5CA0F7; --fb-bg:#1B2E4A;
+      --good:#4CC97E; --good-bg:#173327; --warn:#E4B95D; --warn-bg:#3A2D13;
+      --shadow:0 1px 3px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#F5F8F9; --surface:#FFFFFF; --ink:#15242C; --muted:#5C6E78; --line:#E2E9EC;
+    --accent:#0E9AA7; --accent-soft:#E0F2F4; --accent-ink:#0B7580;
+    --tt:#15242C; --tt-bg:#EAEEF0; --ig:#C13584; --ig-bg:#FBEAF3; --fb:#1877F2; --fb-bg:#E7F0FE;
+    --good:#2E9E5B; --good-bg:#E6F4EC; --warn:#A8720F; --warn-bg:#F8EED9;
+    --shadow:0 1px 3px rgba(21,36,44,.07), 0 6px 20px rgba(21,36,44,.05);
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1519; --surface:#16222A; --ink:#E7EEF1; --muted:#93A6AF; --line:#243540;
+    --accent:#2BC5CF; --accent-soft:#123B41; --accent-ink:#7FDDE4;
+    --tt:#E7EEF1; --tt-bg:#243540; --ig:#F06CB4; --ig-bg:#3B1F30; --fb:#5CA0F7; --fb-bg:#1B2E4A;
+    --good:#4CC97E; --good-bg:#173327; --warn:#E4B95D; --warn-bg:#3A2D13;
+    --shadow:0 1px 3px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.55}
+  .wrap{max-width:820px;margin:0 auto;padding:20px 16px 120px}
+  h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+
+  /* ------- header ------- */
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .logo{width:38px;height:38px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center;flex:none}
+  .logo svg{width:22px;height:22px;stroke:var(--accent-ink)}
+  .eyebrow{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+  h1{font-size:clamp(26px,6vw,34px);line-height:1.15;font-weight:800}
+  .sub{color:var(--muted);margin:10px 0 0;max-width:56ch}
+  .stats{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 0}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:13px;color:var(--muted);box-shadow:var(--shadow)}
+  .stat b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+  .howto{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 18px;margin:20px 0 0}
+  .howto h3{font-size:15px;margin-bottom:8px}
+  .howto ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+  .howto li{margin:4px 0}
+  .howto li b{color:var(--ink)}
+
+  .starter{background:var(--accent-soft);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;margin:14px 0 0}
+  .starter h3{font-size:15px;margin-bottom:8px;color:var(--accent-ink)}
+  .starter ol{margin:0;padding-left:20px;font-size:14px;color:var(--ink)}
+  .starter li{margin:6px 0}
+  .starter li b{font-weight:700}
+  .starter li span{color:var(--muted)}
+
+  /* ------- pillars ------- */
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:20px 0 0}
+  .pillar{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;box-shadow:var(--shadow)}
+  .pillar b{font-family:var(--display);font-size:14px;display:block}
+  .pillar span{font-size:13px;color:var(--muted)}
+
+  /* ------- filter bar ------- */
+  .filters{position:sticky;top:0;z-index:40;background:var(--bg);padding:12px 0 10px;margin-top:22px;border-bottom:1px solid var(--line)}
+  .frow{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .frow + .frow{margin-top:8px}
+  .flabel{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-right:2px}
+  .chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:6px 13px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:var(--body);transition:background .15s,color .15s}
+  .chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .chip:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .count-note{font-size:12.5px;color:var(--muted);margin-top:8px}
+  .count-note b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+  /* ------- plan ------- */
+  .month{margin-top:30px}
+  .month-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .month-head h2{font-size:20px;font-weight:800}
+  .month-head span{color:var(--muted);font-size:13.5px}
+  .week-label{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-ink);font-weight:700;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
+  .week-label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .grid{display:grid;gap:12px}
+  @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:15px 16px 13px;display:flex;flex-direction:column;gap:9px}
+  .card.filmed{opacity:.55}
+  .card-top{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .ptag{font-size:11px;font-weight:800;letter-spacing:.05em;border-radius:6px;padding:3px 8px;text-transform:uppercase}
+  .ptag.tt{background:var(--tt-bg);color:var(--tt)}
+  .ptag.ig{background:var(--ig-bg);color:var(--ig)}
+  .ptag.fb{background:var(--fb-bg);color:var(--fb)}
+  .ptag.all{background:var(--accent-soft);color:var(--accent-ink)}
+  .atag{font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:2.5px 8px}
+  .etag{font-size:11px;font-weight:700;border-radius:6px;padding:3px 8px;margin-left:auto;white-space:nowrap}
+  .etag.q{background:var(--good-bg);color:var(--good)}
+  .etag.m{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+  .etag.b{background:var(--warn-bg);color:var(--warn)}
+  .card h3{font-size:16.5px;font-weight:800;line-height:1.3}
+  .concept{font-size:14px;color:var(--muted)}
+  .fmt{font-size:12.5px;color:var(--muted);background:var(--bg);border-radius:8px;padding:6px 10px}
+  .fmt b{color:var(--ink);font-weight:700}
+  .hooks-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:2px}
+  .hook{display:flex;gap:8px;align-items:flex-start;font-size:14px;padding:7px 9px;background:var(--bg);border-radius:9px}
+  .hook + .hook{margin-top:5px}
+  .hook-txt{flex:1;min-width:0}
+  .copy{flex:none;border:none;background:none;color:var(--muted);cursor:pointer;font-size:12px;padding:2px 4px;border-radius:6px;font-family:var(--body)}
+  .copy:hover{color:var(--accent-ink)}
+  .copy.done{color:var(--good);font-weight:700}
+  .card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:2px;padding-top:9px;border-top:1px solid var(--line)}
+  .filmed-btn{display:flex;align-items:center;gap:7px;border:none;background:none;cursor:pointer;color:var(--muted);font-size:13px;font-family:var(--body);padding:4px 0}
+  .filmed-btn .box{width:17px;height:17px;border-radius:5px;border:1.5px solid var(--muted);display:grid;place-items:center;flex:none}
+  .card.filmed .filmed-btn{color:var(--good)}
+  .card.filmed .filmed-btn .box{background:var(--good);border-color:var(--good);color:#fff;font-size:11px}
+  .edited-dot{font-size:11.5px;color:var(--accent-ink)}
+  [contenteditable]{border-radius:6px;padding:1px 3px;margin:-1px -3px}
+  [contenteditable]:hover{background:var(--accent-soft)}
+  [contenteditable]:focus{outline:2px solid var(--accent);background:var(--surface)}
+
+  .empty{color:var(--muted);text-align:center;padding:40px 0;font-size:14.5px}
+
+  /* ------- footer ------- */
+  .foot{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+  .reset{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:9px;padding:7px 13px;font-size:13px;cursor:pointer;font-family:var(--body)}
+
+  /* ------- chatbot ------- */
+  .fab{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:9px;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:13px 19px;font-size:15px;font-weight:700;font-family:var(--display);cursor:pointer;box-shadow:0 6px 24px rgba(14,154,167,.4)}
+  .fab svg{width:19px;height:19px}
+  .sheet{position:fixed;inset:0;z-index:70;display:none;background:rgba(13,21,25,.45)}
+  .sheet.open{display:block}
+  .panel{position:absolute;right:0;bottom:0;left:0;top:8%;background:var(--bg);border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden}
+  @media(min-width:720px){.panel{left:auto;top:auto;right:24px;bottom:24px;width:420px;height:min(640px,86vh);border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}}
+  .panel-head{display:flex;align-items:center;gap:10px;padding:14px 16px;background:var(--surface);border-bottom:1px solid var(--line);flex:none}
+  .panel-head .logo{width:32px;height:32px;border-radius:10px}
+  .panel-head .logo svg{width:18px;height:18px}
+  .panel-head b{font-family:var(--display);font-size:15px}
+  .panel-head small{display:block;color:var(--muted);font-size:12px;font-weight:400}
+  .close{margin-left:auto;border:none;background:var(--bg);color:var(--muted);width:32px;height:32px;border-radius:9px;cursor:pointer;font-size:16px}
+  .msgs{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:10px}
+  .msg{max-width:88%;padding:10px 13px;border-radius:14px;font-size:14px;white-space:pre-wrap}
+  .msg.bot{background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:5px;align-self:flex-start;box-shadow:var(--shadow)}
+  .msg.user{background:var(--accent);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
+  .idea-card{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:11px;padding:10px 12px;align-self:stretch;max-width:100%;box-shadow:var(--shadow)}
+  .idea-card .ic-top{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:5px}
+  .idea-card b{font-size:14px;font-family:var(--display)}
+  .idea-card p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+  .idea-card .ic-hook{margin-top:7px;font-size:13.5px;background:var(--bg);border-radius:8px;padding:6px 9px;display:flex;gap:8px;align-items:flex-start}
+  .idea-card .ic-hook span{flex:1}
+  .quick{display:flex;gap:6px;overflow-x:auto;padding:10px 14px 4px;flex:none;-webkit-overflow-scrolling:touch}
+  .quick::-webkit-scrollbar{display:none}
+  .qbtn{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--accent-ink);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--body)}
+  .inrow{display:flex;gap:8px;padding:10px 14px 16px;flex:none;background:var(--bg)}
+  .inrow input{flex:1;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:11px 14px;font-size:15px;font-family:var(--body)}
+  .inrow input::placeholder{color:var(--muted)}
+  .send{border:none;background:var(--accent);color:#fff;border-radius:12px;width:46px;cursor:pointer;font-size:16px}
+  .typing{display:inline-flex;gap:4px;padding:4px 2px}
+  .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1.2s infinite}
+  .typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,60%,100%{opacity:.25}30%{opacity:1}}
+  @media (prefers-reduced-motion:reduce){.typing i{animation:none;opacity:.6}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M3 12h18"/></svg></div>
+      <span class="eyebrow">Body Mirror AI · Creator pack</span>
+    </div>
+    <h1>12-Week Content Plan</h1>
+    <p class="sub">66 filmable video ideas with nearly 200 ready-made hooks, labelled by platform, audience and effort level. Chill, honest, data-driven — no shouting, no guilt-tripping. Built for people who are new to posting: plenty of quick wins and no-face-needed formats.</p>
+    <div class="stats">
+      <span class="stat"><b>66</b> ideas</span>
+      <span class="stat"><b>198</b> hooks</span>
+      <span class="stat"><b>12</b> weeks + extras</span>
+      <span class="stat"><b id="filmedCount">0</b> filmed</span>
+    </div>
+
+    <div class="starter">
+      <h3>New to posting? Read this first — it's the whole game</h3>
+      <ol>
+        <li><b>You don't need to post every day.</b> <span>Three videos a week is plenty. Pick the pace you can keep up for months — consistency beats volume every time.</span></li>
+        <li><b>Batch it.</b> <span>Film 3–4 videos in one relaxed hour, once a week. Same spot, same hoodie, phone propped up. One session = a whole week of posts, zero daily pressure.</span></li>
+        <li><b>Film once, post three times.</b> <span>The same video usually works on TikTok, Reels and Facebook. The labels on each card show where it fits — one film day feeds all three.</span></li>
+        <li><b>Bullet points, not scripts.</b> <span>Know your hook and 2–3 things to say, then press record. First take is usually the best take.</span></li>
+        <li><b>Start with the green “Quick win” cards.</b> <span>Filter Effort → Quick win. Screen records, voiceovers and no-talking formats — some don't even need your face.</span></li>
+        <li><b>Done beats perfect.</b> <span>Phone camera + daylight + saying something honest outperforms a polished ad. The scruffy videos are the ones that feel real.</span></li>
+      </ol>
+    </div>
+
+    <div class="howto">
+      <h3>How to use this</h3>
+      <ul>
+        <li><b>Tap any title, concept or hook to edit it.</b> Your edits save automatically on this device.</li>
+        <li><b>Copy</b> next to a hook copies it for your caption or teleprompter.</li>
+        <li>Tick <b>Filmed</b> when a video is done — it fades out so you can see what's left.</li>
+        <li>Filter by <b>platform</b>, <b>audience</b> or <b>effort</b> using the bar below. The <b>Extras</b> tab is a swap-in bank for any week.</li>
+        <li>Out of ideas or feeling camera-shy? Open the <b>Idea Coach</b> (bottom right) — it holds 100+ extra original ideas including a whole low-effort pack, and never repeats itself.</li>
+      </ul>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar"><b>Scan &amp; React</b><span>Real scans, real reactions. The product sells itself.</span></div>
+      <div class="pillar"><b>Progress Proof</b><span>Series content — 30/60/90-day journeys with receipts.</span></div>
+      <div class="pillar"><b>Calm Myth-Busting</b><span>Scale lies, water weight, plateaus — explained kindly.</span></div>
+      <div class="pillar"><b>Beginner's Corner</b><span>Zero judgment. Starting points, not verdicts.</span></div>
+      <div class="pillar"><b>Numbers for Lifters</b><span>Muscle %, cuts, bulks — the data serious lifters want.</span></div>
+      <div class="pillar"><b>Gym Life &amp; Fun</b><span>Mates, strangers, trends — the shareable stuff.</span></div>
+    </div>
+  </header>
+
+  <div class="filters">
+    <div class="frow" id="monthFilters">
+      <span class="flabel">Month</span>
+      <button class="chip on" data-m="0">All</button>
+      <button class="chip" data-m="1">1 · Meet the Mirror</button>
+      <button class="chip" data-m="2">2 · Proof Month</button>
+      <button class="chip" data-m="3">3 · Scale It Up</button>
+      <button class="chip" data-m="4">Extras</button>
+    </div>
+    <div class="frow" id="platFilters">
+      <span class="flabel">Platform</span>
+      <button class="chip on" data-p="all">All</button>
+      <button class="chip" data-p="tt">TikTok</button>
+      <button class="chip" data-p="ig">Instagram</button>
+      <button class="chip" data-p="fb">Facebook</button>
+    </div>
+    <div class="frow" id="audFilters">
+      <span class="flabel">Audience</span>
+      <button class="chip on" data-a="all">All</button>
+      <button class="chip" data-a="trans">Transformation</button>
+      <button class="chip" data-a="lift">Lifters</button>
+      <button class="chip" data-a="beg">Beginners</button>
+    </div>
+    <div class="frow" id="effFilters">
+      <span class="flabel">Effort</span>
+      <button class="chip on" data-e="all">All</button>
+      <button class="chip" data-e="q">Quick win</button>
+      <button class="chip" data-e="m">Medium</button>
+      <button class="chip" data-e="b">Bigger build</button>
+    </div>
+    <div class="count-note">Showing <b id="showCount">66</b> ideas</div>
+  </div>
+
+  <main id="plan"></main>
+  <p class="empty" id="empty" hidden>No ideas match these filters — try widening them.</p>
+
+  <div class="foot">
+    <span>Edits &amp; ticks save on <em>your</em> device only. Body Mirror AI · Content plan v2</span>
+    <button class="reset" id="resetBtn">Reset my edits &amp; ticks</button>
+  </div>
+</div>
+
+<button class="fab" id="fabBtn" aria-label="Open the Idea Coach chatbot">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5z"/></svg>
+  Idea Coach
+</button>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Idea Coach chatbot">
+  <div class="panel">
+    <div class="panel-head">
+      <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M3 12h18"/></svg></div>
+      <div><b>Idea Coach</b><small>Original ideas only — I never repeat myself</small></div>
+      <button class="close" id="closeBtn" aria-label="Close chat">✕</button>
+    </div>
+    <div class="msgs" id="msgs"></div>
+    <div class="quick" id="quick"></div>
+    <div class="inrow">
+      <input id="chatIn" type="text" placeholder="Ask for ideas, hooks, captions…" autocomplete="off">
+      <button class="send" id="sendBtn" aria-label="Send">➤</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ DATA ============ */
+/* p: platforms tt/ig/fb or ['all']  a: audience trans/lift/beg/all  e: effort q/m/b */
+const PLAN=[
+ // ---------- MONTH 1 : MEET THE MIRROR ----------
+ {m:1,w:1,t:"My first ever body scan",p:["all"],a:["trans","beg"],e:"q",
+  c:"Film your genuine first scan, start to finish. No script — just honest curiosity and a real reaction to your numbers. Authenticity is the whole video.",
+  f:"Talking head + screen record · 45–60s",
+  h:["I just found out my real body fat % using nothing but my phone.",
+     "So apparently the mirror has been lying to me. Kind of.",
+     "I did a full body scan in my kitchen and the results genuinely surprised me."]},
+ {m:1,w:1,t:"How it works in 30 seconds",p:["tt","ig"],a:["all"],e:"q",
+  c:"Clean, fast demo: open app, scan, results appear. Calm voiceover walking through what's happening. This becomes your pinned explainer.",
+  f:"Screen record + voiceover · 30s",
+  h:["This app measured my whole body in about 40 seconds. Here's how.",
+     "No calipers, no weird pinching, no guesswork. Just my phone.",
+     "Here's what happens when you let AI take your measurements."]},
+ {m:1,w:1,t:"Scale vs scan",p:["all"],a:["trans"],e:"m",
+  c:"Step on a normal scale, then do a scan. Show how the single scale number hides the real story of fat vs muscle. Keep it kind — the scale isn't evil, just incomplete.",
+  f:"Talking head with props · 60s",
+  h:["My weight hasn't changed in 3 weeks. Turns out my body has.",
+     "The scale and this scan told me two completely different stories.",
+     "If you only track your weight, you're only getting half the picture."]},
+ {m:1,w:1,t:"Body fat %, explained gently",p:["fb","ig"],a:["beg"],e:"m",
+  c:"A relaxed one-minute explainer of what body fat percentage actually is, using your own scan as the example. No jargon, no judgment.",
+  f:"Talking head, on-screen text · 60s",
+  h:["Nobody ever properly explained body fat percentage to me — so here it is in one minute.",
+     "You don't need to be a scientist to understand these three numbers.",
+     "Body fat % explained like you're new to the gym. Because we all were."]},
+ {m:1,w:2,t:"7 days, 7 scans",p:["tt","ig"],a:["trans","lift"],e:"m",
+  c:"Scan daily for a week, cut into a timelapse of the numbers. The honest takeaway: daily numbers wobble, weekly trends matter. Sets you up as trustworthy.",
+  f:"Montage + voiceover · 45s",
+  h:["I scanned my body every day for a week. Here's what changed — and what didn't.",
+     "Day 1 vs Day 7. The numbers move less than you think, and that's the point.",
+     "A week of daily scans taught me more than a month of guessing."]},
+ {m:1,w:2,t:"The measurements you can't do yourself",p:["all"],a:["lift"],e:"m",
+  c:"Comedy-lite: try to measure your own shoulders/back with a tape measure, fail politely, then let the scan do all 12+ measurements at once.",
+  f:"Skit + demo · 45s",
+  h:["Ever tried measuring your own shoulders with a tape? Yeah. There's a better way.",
+     "I let AI take 12 measurements I could never get right on my own.",
+     "Tape measure vs body scan — I tested both so you don't have to."]},
+ {m:1,w:2,t:"“Am I actually making progress?”",p:["fb","ig"],a:["beg"],e:"m",
+  c:"Speak directly to the person 3 months into the gym who can't see changes yet. Show how composition shifts before the mirror catches up.",
+  f:"Talking head · 60–90s",
+  h:["Three months in the gym and no idea if it's working? This one's for you.",
+     "Here's how beginners can see progress before the mirror shows it.",
+     "The gym works before the mirror does. Here's the proof."]},
+ {m:1,w:2,t:"Muscle % — the lifter's number",p:["tt","ig"],a:["lift"],e:"q",
+  c:"Position muscle percentage as the most honest metric for anyone bulking. Show your own number and what you're doing with it.",
+  f:"Gym b-roll + voiceover · 45s",
+  h:["Forget the scale. This is the number that tells you if your bulk is actually working.",
+     "I finally have a way to check if I'm gaining muscle or just… gaining.",
+     "Muscle percentage might be the most honest number in fitness."]},
+ {m:1,w:3,t:"Day 0 — my 30-day experiment",p:["all"],a:["trans"],e:"q",
+  c:"Series starter. Post your real starting numbers, state a modest goal, invite people to follow along. This creates a reason to come back for a month.",
+  f:"Talking head · 45s",
+  h:["I'm tracking my next 30 days with body scans. Watch this space.",
+     "Day 0. Here are my real starting numbers — no filters, no flexing.",
+     "Starting a 30-day experiment: can I change my body composition in a month?"]},
+ {m:1,w:3,t:"Opening my progress report",p:["tt","ig"],a:["all"],e:"q",
+  c:"Screen-record opening your first weekly progress report, react in real time. Mild suspense, honest reaction — good or mixed.",
+  f:"Screen record + face cam · 30–45s",
+  h:["The app just sent my weekly progress report. Let's open it together.",
+     "It's like a school report card, but for your body. Mine just arrived.",
+     "Opening my progress report and yes, I'm a little nervous."]},
+ {m:1,w:3,t:"What a 1% change really means",p:["fb"],a:["trans","beg"],e:"m",
+  c:"Calm perspective piece: 1% body fat sounds tiny but is a genuinely big deal. Use simple visuals (a butter block, a bag of sugar) to make it land.",
+  f:"Talking head with props · 60s",
+  h:["Losing 1% body fat doesn't sound like much. It's actually huge — here's why.",
+     "Small numbers, big changes. Let me put 1% into perspective.",
+     "Here's what one percent of progress really looks like on a body."]},
+ {m:1,w:3,t:"Achievement unlocked",p:["tt","ig"],a:["beg"],e:"q",
+  c:"Show off the achievements/badges feature with light self-aware humour. Gamified progress is genuinely motivating — lean into being pleased about it.",
+  f:"Screen record + face cam · 30s",
+  h:["My fitness app just gave me an achievement and honestly? I'm chuffed.",
+     "Turns out unlocking badges for your own body is weirdly motivating.",
+     "I'm collecting fitness achievements like they're trophies. No shame."]},
+ {m:1,w:4,t:"Scanning my gym buddy",p:["all"],a:["all"],e:"m",
+  c:"Two-person video: scan a mate who's confident about their numbers. Their reaction carries the video. Keep it warm, never mocking.",
+  f:"Duo, handheld · 60s",
+  h:["I scanned my mate who swears he's 10% body fat. The results…",
+     "Letting my gym partner see his real numbers for the first time.",
+     "We both got scanned. Only one of us was happy about it."]},
+ {m:1,w:4,t:"Your mirror has moods",p:["ig","tt"],a:["trans"],e:"q",
+  c:"A quieter, reflective piece: some days the mirror is kind, some days it isn't — measurements don't have moods. Great for voiceover with gym b-roll.",
+  f:"B-roll + voiceover · 30–45s",
+  h:["Some days the mirror is kind. The numbers are honest every day.",
+     "I stopped judging my progress by my reflection. Here's what I use instead.",
+     "Your mirror has moods. Your measurements don't."]},
+ {m:1,w:4,t:"The number that surprised me",p:["tt"],a:["all"],e:"m",
+  c:"Storytime: after a few weeks of scanning, share the one measurement that genuinely surprised you and what you're doing about it.",
+  f:"Talking head storytime · 45–60s",
+  h:["My body scan told me something I genuinely didn't expect.",
+     "Three weeks of scans and one number keeps surprising me.",
+     "I thought I knew my body. This one measurement said otherwise."]},
+ {m:1,w:4,t:"“But is it accurate?”",p:["fb","ig"],a:["all"],e:"m",
+  c:"Address the #1 objection head-on and honestly: how camera-based scanning works, what it's great at (consistency, trends), and what it's not claiming to be.",
+  f:"Talking head · 60–90s",
+  h:["Everyone asks if a phone scan can really be accurate. Fair question.",
+     "Let's talk about how a camera can actually measure body fat.",
+     "I was skeptical too. Here's what changed my mind."]},
+
+ // ---------- MONTH 2 : THE PROOF MONTH ----------
+ {m:2,w:5,t:"30-day results reveal",p:["all"],a:["trans"],e:"m",
+  c:"The payoff of your Day-0 video. Side-by-side numbers, honest verdict, what you'd change. Link back to the original video in the caption.",
+  f:"Talking head + screen record · 60–90s",
+  h:["30 days ago I posted my starting numbers. Time to see what changed.",
+     "One month, thirty scans, zero guessing. Here are my results.",
+     "The 30-day check-in is here. I haven't looked yet."]},
+ {m:2,w:5,t:"Cutting without losing muscle",p:["tt","ig"],a:["lift"],e:"m",
+  c:"Show how you watch muscle % while weight drops during a cut. This is the exact anxiety every lifter has on a cut — and the app answers it.",
+  f:"Gym b-roll + voiceover · 45–60s",
+  h:["How I know my cut is burning fat and not my hard-earned muscle.",
+     "The scariest part of cutting is losing muscle. This is how I keep watch.",
+     "My weight is dropping. Here's how I know it's the right kind of weight."]},
+ {m:2,w:5,t:"The plateau that wasn't",p:["fb","ig"],a:["trans"],e:"m",
+  c:"Body recomposition explainer: weight flat, but fat down and muscle up. The most encouraging story in fitness, told with your own graph.",
+  f:"Talking head + app graph · 60s",
+  h:["Haven't lost weight in two weeks? You might still be making progress.",
+     "The scale plateau that was actually a body recomposition. A short story.",
+     "Before you get discouraged by the scale, check these two numbers."]},
+ {m:2,w:5,t:"Quiet progress",p:["ig","fb"],a:["beg"],e:"q",
+  c:"Empathetic piece for people who train quietly and never post. Progress doesn't have to be public to be real — it can just live in your app.",
+  f:"Voiceover + calm b-roll · 30–45s",
+  h:["You don't have to post gym selfies to be making progress.",
+     "For everyone quietly working on themselves — here's how to know it's working.",
+     "Progress doesn't have to be loud. Mine lives in an app."]},
+ {m:2,w:6,t:"You guessed my body fat %",p:["tt","ig"],a:["all"],e:"q",
+  c:"Ask followers to guess your body fat % in the comments (previous post or poll), then reveal the scan. Engagement machine — and repeatable monthly.",
+  f:"Reveal format · 30–45s",
+  h:["You all guessed my body fat percentage. Most of you were way off.",
+     "Guess the number, then watch the scan. Let's play.",
+     "The comments guessed everything from 8% to 25%. Here's the truth."]},
+ {m:2,w:6,t:"Bulk check-in: muscle or just food?",p:["tt"],a:["lift"],e:"m",
+  c:"Four weeks into a bulk, use the scan to answer the eternal question. Honest numbers either way — the honesty is what builds the audience.",
+  f:"Talking head + app data · 45–60s",
+  h:["Four weeks into my bulk. Time to find out if it's muscle or just food.",
+     "The scan doesn't care how heavy my lifts feel. It just tells the truth.",
+     "Bulk update: the numbers are in and I have thoughts."]},
+ {m:2,w:6,t:"What I wish I knew on day one",p:["fb","ig"],a:["beg"],e:"m",
+  c:"Warm storytelling: the guessing, the confusion, the comparing — and the one habit (tracking a real baseline) you'd hand your past self.",
+  f:"Talking head storytime · 60–90s",
+  h:["A year ago I was guessing everything. Here's what I'd tell that version of me.",
+     "Things I wish someone told me before my first gym session.",
+     "Starting the gym with zero clue? Here's your shortcut."]},
+ {m:2,w:6,t:"The tailor's secret",p:["ig","fb"],a:["all"],e:"m",
+  c:"Lifestyle angle: use your scan measurements to order clothes that actually fit online. A use-case nobody expects — very shareable outside the gym bubble.",
+  f:"Lifestyle vlog style · 45s",
+  h:["Unexpected perk: this app knows my measurements better than my tailor.",
+     "I used my body scan to buy clothes that actually fit. Game changer.",
+     "Not just for the gym — here's the body-scan use nobody talks about."]},
+ {m:2,w:7,t:"The rest week experiment",p:["ig","fb"],a:["trans","beg"],e:"m",
+  c:"Take a deliberate rest week and scan before/after. Spoiler: the sky doesn't fall. A calming, permission-giving video people will share.",
+  f:"Vlog + reveal · 60s",
+  h:["I took a full rest week and my numbers didn't fall apart. Proof inside.",
+     "Rest days aren't lost days. My scan history agrees.",
+     "A week off the gym. Let's see what actually happened to my body."]},
+ {m:2,w:7,t:"The 60-second Sunday habit",p:["tt","ig"],a:["beg"],e:"q",
+  c:"Show your weekly scan ritual — coffee, scan, check the trend, done. Tiny habit framing makes the app feel effortless, not obsessive.",
+  f:"Aesthetic morning b-roll · 30s",
+  h:["My scan streak is the only streak I've ever kept alive.",
+     "Tiny habit, big data: sixty seconds every Sunday morning.",
+     "How a weekly scan became the habit that keeps my gym habit going."]},
+ {m:2,w:7,t:"The pizza night 2kg, explained",p:["tt","fb"],a:["all"],e:"m",
+  c:"Calmly explain water weight and why overnight 'gains' aren't fat. Use your own post-weekend scan as the example. Reassuring, not preachy.",
+  f:"Talking head · 45–60s",
+  h:["You didn't gain fat overnight. Here's what that number actually was.",
+     "The 2kg that appeared after pizza night — explained calmly.",
+     "Why your weight swings daily, and why I stopped caring."]},
+ {m:2,w:7,t:"Showing my PT my scan history",p:["fb","ig"],a:["lift","all"],e:"m",
+  c:"Bring a coach or PT into frame and show them your trend data. Their professional reaction is the content — and it plants the coach use-case.",
+  f:"Duo conversation · 60–90s",
+  h:["I showed my PT my scan history. His reaction was worth filming.",
+     "My coach used to eyeball my progress. Now we both just check the app.",
+     "What happens when your trainer sees your real numbers."]},
+ {m:2,w:8,t:"60 days in 30 seconds",p:["all"],a:["trans"],e:"b",
+  c:"Montage of two months of scans and clips, numbers ticking across the screen. No big transformation claims — just the quiet power of consistency.",
+  f:"Montage + music · 30s",
+  h:["Sixty days of scans in thirty seconds. Watch the numbers move.",
+     "This is what two months of showing up quietly looks like.",
+     "No transformation photo. Just sixty days of honest data."]},
+ {m:2,w:8,t:"The honest bad week",p:["tt","ig"],a:["all"],e:"q",
+  c:"Post a week where the numbers went the wrong way. Zero drama, zero excuses — just what happened and what you're adjusting. Trust content.",
+  f:"Talking head · 45s",
+  h:["This week my numbers went the wrong way. Posting it anyway.",
+     "Not every progress report is good news. Here's mine.",
+     "Bad week, honest scan. This is what real tracking looks like."]},
+ {m:2,w:8,t:"The body fat ranges, minus the judgment",p:["fb"],a:["beg","trans"],e:"m",
+  c:"Walk through healthy body fat ranges (athlete / fit / average) with warmth. The goal: people leave informed, not ashamed.",
+  f:"Explainer + graphics · 60–90s",
+  h:["What's a healthy body fat percentage? Let's keep it simple.",
+     "Athlete, fit, average — where the ranges actually sit.",
+     "The body fat chart, explained without the judgment."]},
+ {m:2,w:8,t:"Adding receipts to the guessing trend",p:["tt"],a:["all"],e:"q",
+  c:"Duet/stitch a 'guess my body fat' style video and gently point out there's an app that just… measures it. Ride the trend without punching down.",
+  f:"Duet/stitch · 20–30s",
+  h:["Everyone's guessing body fat percentages. I brought receipts.",
+     "You can stop guessing — there's literally an app that measures it.",
+     "Adding actual data to this trend, because someone had to."]},
+
+ // ---------- MONTH 3 : SCALE IT UP ----------
+ {m:3,w:9,t:"The 90-day story",p:["all"],a:["trans"],e:"b",
+  c:"Your biggest video: the full three-month journey told through the app's progress reports. Structure it like a story — start, wobble, turning point, now.",
+  f:"Edited mini-doc · 90s–2min",
+  h:["Ninety days ago I started scanning. Here's the full story in numbers.",
+     "Three months. One app. Every single change, measured.",
+     "This is the progress report I've been building towards all year."]},
+ {m:3,w:9,t:"My routine + the data behind it",p:["tt","ig"],a:["lift"],e:"m",
+  c:"Share your actual weekly split, then show the composition trend that proves (or questions) it. Training is the input; the scan is the output.",
+  f:"Gym vlog + app screens · 60s",
+  h:["My full week of training and the numbers that prove it works.",
+     "Here's the routine — and here's the data behind it.",
+     "Training is the input. This is how I watch the output."]},
+ {m:3,w:9,t:"Answering your top questions",p:["fb","ig"],a:["all"],e:"m",
+  c:"Collect real comments/DMs from the past two months and answer the top five on camera. Community content that also handles objections.",
+  f:"Q&amp;A talking head · 90s",
+  h:["You asked, I scanned. Answering your top questions this week.",
+     "The five questions everyone asks about body scanning, answered.",
+     "Your most-asked question genuinely surprised me. Let's get into it."]},
+ {m:3,w:9,t:"The one-scan challenge",p:["all"],a:["all"],e:"q",
+  c:"Soft call-to-action video: challenge viewers to do one scan a week for a month. Low pressure, high curiosity. This is your conversion video — keep it kind.",
+  f:"Direct to camera · 30–45s",
+  h:["If you've been guessing your progress, this is your sign to measure it.",
+     "One scan a week. That's the whole challenge. Who's in?",
+     "Try one scan. Worst case, you learn something about yourself."]},
+ {m:3,w:10,t:"The couples challenge",p:["ig","fb"],a:["trans","beg"],e:"m",
+  c:"You + partner or friend race to improve body comp over 30 days. Friendly stakes (loser cooks for a month). Sets up a whole month of episodes.",
+  f:"Duo series · 45–60s each",
+  h:["My partner and I are racing to change our body comp. Loser cooks for a month.",
+     "We turned progress tracking into a friendly competition.",
+     "Two people, one challenge, thirty days of scans. Let's go."]},
+ {m:3,w:10,t:"What lifters get wrong about body fat",p:["tt"],a:["lift"],e:"m",
+  c:"Nuanced take: strength and leanness are different goals, and that's fine. Use your data to show how you balance both without obsessing.",
+  f:"Talking head · 60s",
+  h:["Lifting heavy but the composition isn't changing? Let's talk.",
+     "Strong doesn't always mean lean — and that's completely fine.",
+     "The number on the bar and the number on the scan tell different stories."]},
+ {m:3,w:10,t:"I put off my first scan for weeks",p:["ig","fb"],a:["beg"],e:"m",
+  c:"Vulnerable storytime about the fear of seeing your starting numbers — and the reframe: a starting point is a map, not a judgment.",
+  f:"Talking head storytime · 60–90s",
+  h:["I put off my first scan for weeks. Here's what I was actually afraid of.",
+     "If you're scared of your starting numbers, watch this first.",
+     "Your starting point isn't a judgment. It's just a map."]},
+ {m:3,w:10,t:"Scanning in random places",p:["tt"],a:["all"],e:"q",
+  c:"Light series: scan at a hotel, at your mum's, before a night out. Shows portability, and the silliness makes it bingeable. Part 1 of many.",
+  f:"Comedy vlog · 20–30s",
+  h:["Scanning my body in increasingly random locations. Part one.",
+     "Hotel room scan check — because progress travels with you.",
+     "Can you body scan at the beach? Asking for science."]},
+ {m:3,w:11,t:"Progress isn't a straight line",p:["all"],a:["trans"],e:"q",
+  c:"Show your full wobbly progress graph and zoom out to reveal the trend. The dips are the point — everyone who's ever plateaued will feel seen.",
+  f:"Screen record + voiceover · 45s",
+  h:["My progress graph looks like a mountain range. That's normal.",
+     "Zoom out. The trend matters more than the Tuesday.",
+     "Here's ten weeks of my data — dips, spikes and all."]},
+ {m:3,w:11,t:"Realistic muscle gain, measured",p:["tt","ig"],a:["lift"],e:"m",
+  c:"Use three months of your own data to answer 'how much muscle can you actually gain in a month?' Real numbers beat internet bro-science.",
+  f:"Data breakdown · 60s",
+  h:["How much muscle can you really gain in a month? My data says this.",
+     "Realistic muscle gain numbers, straight from three months of scans.",
+     "The truth about monthly muscle gain — measured, not guessed."]},
+ {m:3,w:11,t:"Starting the gym this week?",p:["fb","ig"],a:["beg"],e:"q",
+  c:"Direct advice for new starters: your only job in week one is getting a baseline. Simple, warm, instantly actionable — perfect for shares and saves.",
+  f:"Direct to camera · 30–45s",
+  h:["Starting the gym this week? Do this one thing on day one.",
+     "Your only job in week one: get a starting point.",
+     "New gym era? Take the scan now. Thank yourself in three months."]},
+ {m:3,w:11,t:"Achievement hunting, day 12",p:["tt"],a:["beg","all"],e:"q",
+  c:"Ongoing quest to unlock every badge in the app. Update-style video with light humour — parasocial, bingeable, and shows off the feature set.",
+  f:"Vlog update · 30s",
+  h:["Trying to unlock every achievement in my fitness app. Day 12.",
+     "Some people collect trainers. I collect progress badges.",
+     "The achievement I'm proudest of took ten weeks to unlock."]},
+ {m:3,w:12,t:"The full recap — every week, side by side",p:["all"],a:["all"],e:"b",
+  c:"Series finale: line up all 12 weekly reports and narrate the journey in one video. Ends with what's next — which starts your next 12 weeks of content.",
+  f:"Edited recap · 90s",
+  h:["Twelve weeks of content, one honest recap. Here's everything that changed.",
+     "The numbers from every single week, side by side. Wild.",
+     "Three months of scans. Zero guesswork. Full story inside."]},
+ {m:3,w:12,t:"Gym vox pop: guess your own number",p:["tt","ig"],a:["all"],e:"b",
+  c:"Ask (willing!) gym-goers to guess their own body fat %, then scan them. Get permission on camera, keep every reaction kind. Massive share potential.",
+  f:"Street/gym interview · 60s",
+  h:["I asked gym strangers if they knew their body fat %. Then we found out.",
+     "Gym vox pop: guess your own number, then scan. People were shocked.",
+     "Strangers guessing their own numbers — then meeting reality."]},
+ {m:3,w:12,t:"Why I retired my bathroom scale",p:["fb"],a:["trans"],e:"m",
+  c:"Reflective closer: the scale isn't wrong, it's just not enough. Explain your new simple setup — one weekly scan, one trend line, zero anxiety.",
+  f:"Talking head · 60s",
+  h:["The scale is fine. It's just not enough. Here's what I use now.",
+     "After 90 days of scans, the bathroom scale feels like a rumour.",
+     "I retired my scale. Well, sort of. Here's my new setup."]},
+ {m:3,w:12,t:"Your turn — show us your graph",p:["all"],a:["all"],e:"q",
+  c:"UGC invitation: ask followers to post their week-one scan or wobbliest progress graph and tag the app. Repost the best — next quarter's content feeds itself.",
+  f:"Direct to camera · 30s",
+  h:["Post your week-one scan and tag us. We'll follow your journey.",
+     "Show me your progress graph. The wobbliest one wins.",
+     "Your numbers, your story. We want to see it."]},
+
+ // ---------- EXTRAS : SWAP-IN BANK ----------
+ {m:4,w:13,t:"Hands-only scan tutorial",p:["tt","ig"],a:["all"],e:"q",
+  c:"No face needed: film just your hands and the phone doing a full scan, overhead angle. On-screen captions explain each step. Perfect first video for the camera-shy.",
+  f:"Hands + phone, captions, no talking · 30s",
+  h:["Full body scan, no gym, no equipment. Watch.",
+     "All you need is a phone and 40 seconds. Here's the whole process.",
+     "The easiest health habit you'll ever build. Filmed start to finish."]},
+ {m:4,w:13,t:"My week in three numbers",p:["ig","fb"],a:["trans"],e:"q",
+  c:"No talking: three stats from your week appear over calm gym or morning b-roll with music. Takes 10 minutes to make, works every single week.",
+  f:"B-roll + text overlay, no talking · 20s",
+  h:["My whole week, three numbers, no waffle.",
+     "Body fat, muscle, waist. That's the week. See you Sunday.",
+     "This is what a normal week of progress actually looks like."]},
+ {m:4,w:13,t:"The graph tells the story",p:["tt","fb"],a:["trans"],e:"q",
+  c:"Screen-record your progress graph and point things out with captions or calm voiceover: this dip was a holiday, this climb was porridge and patience. No face required.",
+  f:"Screen record + captions · 30–45s",
+  h:["This dip? Holiday. This climb? Consistency. Let me walk you through it.",
+     "Every wobble on this graph has a story. Here are three of them.",
+     "My last two months, one graph, full honesty."]},
+ {m:4,w:13,t:"Silent Sunday scan",p:["tt","ig"],a:["all"],e:"q",
+  c:"ASMR-adjacent: the quiet ritual of the weekly scan — kettle, phone propped up, scan, coffee. No voiceover, just ambient sound and one caption at the end.",
+  f:"Aesthetic silent vlog · 20–30s",
+  h:["No talking. Just the 60 seconds that keeps me on track.",
+     "The quietest habit in my week is the one that changed the most.",
+     "Sunday, 8am. Same ritual every week. Here's why."]},
+ {m:4,w:13,t:"Five facts in twenty seconds",p:["tt","fb"],a:["beg"],e:"q",
+  c:"Faceless listicle: five short body-composition facts as on-screen text over gym b-roll. Educational, fast, endlessly repeatable with new facts.",
+  f:"B-roll + text list, no talking · 20s",
+  h:["Five things about body fat you can read in 20 seconds.",
+     "Everything useful I know about muscle %, in one short list.",
+     "Read this faster than your rest timer runs out."]},
+ {m:4,w:14,t:"One number I check every week",p:["fb","ig"],a:["beg"],e:"q",
+  c:"Short talking head: the single metric you actually pay attention to and why it beats obsessing over all of them. Calm, opinionated, easy to film in one take.",
+  f:"Direct to camera, one take · 30s",
+  h:["I track one number a week. Just one. Here's which.",
+     "Ignore 90% of your stats. This is the one that matters.",
+     "If you only check one thing every week, make it this."]},
+ {m:4,w:14,t:"3 gym myths my data killed",p:["tt","fb"],a:["all"],e:"m",
+  c:"Bring up three common gym beliefs and show what your actual scan history says about each. Gentle myth-busting with receipts, not lectures.",
+  f:"Talking head + app screens · 60s",
+  h:["Three things the gym told me that my own data disagreed with.",
+     "I believed all three of these. My scan history didn't.",
+     "Bro-science vs my actual numbers. Three rounds. Let's go."]},
+ {m:4,w:14,t:"What changed after 10 scans",p:["ig"],a:["trans"],e:"q",
+  c:"Reflective one-take: not the body changes — the mindset ones. Less scale anxiety, more patience, clearer goals. This video recruits the hesitant.",
+  f:"Direct to camera, one take · 45s",
+  h:["Ten scans in, and the biggest change wasn't my body.",
+     "What actually changes when you start measuring properly.",
+     "Ten weeks of data taught me to relax. Genuinely."]},
+ {m:4,w:14,t:"Pundit mode: my weekly report",p:["tt"],a:["all"],e:"q",
+  c:"Read your weekly progress report like a sports pundit doing match analysis — mock-serious tone, 'let's look at the replay' energy. Fun, low-stakes, very rewatchable.",
+  f:"Talking head, comedy tone · 30–45s",
+  h:["Right. Let's analyse this week's performance. Starting with the waist.",
+     "Match report: me vs my body, week nine.",
+     "The stats are in and the manager is… cautiously optimistic."]},
+ {m:4,w:15,t:"Blind guess battle",p:["tt","ig"],a:["all"],e:"m",
+  c:"You and a mate write down guesses for each other's numbers, then scan and compare. Closest guess wins a forfeit. Two videos' worth of content in one session.",
+  f:"Duo game format · 45–60s",
+  h:["We guessed each other's body fat. The loser does the washing up for a week.",
+     "My mate reckons he knows my stats better than I do. Let's test that.",
+     "Blind guess battle: two mates, two scans, one very wrong prediction."]},
+ {m:4,w:15,t:"My mate's first scan",p:["all"],a:["beg"],e:"q",
+  c:"Film a friend doing their very first scan (with their blessing). Their genuine questions and reaction mirror exactly what a new viewer is thinking.",
+  f:"Duo, handheld · 45–60s",
+  h:["Convinced my mate to do his first body scan. He had questions.",
+     "First-scan reactions never get old. Here's his.",
+     "He's been guessing for years. Today he finds out."]},
+ {m:4,w:15,t:"Loser buys the protein",p:["tt","ig"],a:["lift"],e:"m",
+  c:"Month-long mini-series: two lifters, one target each (muscle % up, fat % down), loser buys the winner's protein for a month. Check in weekly.",
+  f:"Duo challenge series · 30–45s each",
+  h:["One month. Two lifters. Loser buys the protein. Scans decide.",
+     "We put money on our body comp. Well — protein money.",
+     "Week one of the bet. Trash talk levels: high. Data levels: honest."]},
+ {m:4,w:15,t:"Reading the group chat's guesses",p:["fb"],a:["all"],e:"q",
+  c:"Ask your group chat to guess your numbers, then read the (anonymised) answers on camera before revealing the scan. Warm, funny, very relatable.",
+  f:"Talking head + reveal · 45–60s",
+  h:["I asked the group chat to guess my body fat. They were not kind.",
+     "The lads' guesses vs the actual scan. Someone owes me an apology.",
+     "Group chat said 25%. The app said otherwise. Justice."]},
+ {m:4,w:16,t:"Expectation vs data",p:["tt"],a:["trans"],e:"q",
+  c:"Trend-friendly format: what you expected the week to do to your numbers vs what actually happened. Two captions, one reveal, endlessly reusable.",
+  f:"Split caption + reveal · 15–20s",
+  h:["What I expected after a week of birthdays vs what actually happened.",
+     "Expectation: disaster. Reality: 0.2%. We move.",
+     "The gap between how a week feels and what it measures. Every time."]},
+ {m:4,w:16,t:"Things my scan knows about me",p:["ig","tt"],a:["all"],e:"q",
+  c:"Light list format: the oddly specific things the app tracks — shoulder-to-waist ratio, symmetry, trends — delivered deadpan. No gym footage needed.",
+  f:"List + captions or one take · 30s",
+  h:["My phone knows my shoulder-to-waist ratio. I didn't know I had one.",
+     "Things this app knows about me that my doctor doesn't.",
+     "An AI has opinions about my left arm. Welcome to 2026."]},
+ {m:4,w:16,t:"POV: the app after leg day",p:["tt"],a:["all"],e:"q",
+  c:"Silly POV skit: dramatically limping to do the weekly scan after leg day, the app delivering its verdict, you nodding solemnly. Zero polish required — the sillier the better.",
+  f:"POV skit · 15–20s",
+  h:["POV: reporting to the app after leg day.",
+     "The app doesn't know what I've been through this week. Time to show it.",
+     "Me and the app have a weekly meeting. Today's agenda: pain."]},
+ {m:4,w:16,t:"Rating my week using only numbers",p:["ig","fb"],a:["all"],e:"q",
+  c:"End-of-week check-in where the scan decides the score, not your mood. 'Felt like a 4. Measured like a 7.' A repeatable weekly format with a built-in twist.",
+  f:"Talking head or captions · 30s",
+  h:["Felt like a terrible week. Measured like a decent one. Interesting.",
+     "I let the data rate my week so my mood doesn't have to.",
+     "Week score: mood said 4, scan said 7. Trusting the scan."]},
+ {m:4,w:16,t:"The 10-second demo",p:["all"],a:["all"],e:"q",
+  c:"One continuous shot: phone goes up, scan runs, result appears. Ten seconds, no cuts, no talking, one caption. The simplest possible proof-it-works video.",
+  f:"One-take demo · 10–15s",
+  h:["Ten seconds. That's the whole thing.",
+     "No setup, no cuts, no tricks. Just a scan.",
+     "Blink and you'll miss it — full body scan in real time."]}
+];
+
+const WEEK_THEMES={1:"First impressions",2:"Building trust",3:"Progress begins",4:"Community & fun",5:"The 30-day payoff",6:"Engagement plays",7:"Habits & honesty",8:"Two months deep",9:"The big reveal",10:"Challenges & series",11:"Real numbers",12:"Finale & handover",13:"Low-effort & faceless",14:"Easy talking heads",15:"With a mate",16:"Trends & fun"};
+const MONTH_META={1:["Month 1 — Meet the Mirror","Introduce the app through genuine curiosity. Goal: make people ask “what app is that?”"],2:["Month 2 — The Proof Month","Payoffs, education and honesty. Goal: trust — the scan tells the truth, and so do you."],3:["Month 3 — Scale It Up","Series, challenges and community. Goal: viewers start their own journeys."],4:["Swap-In Bank — extras for any week","No fixed schedule. Drop these into any week, swap them for anything, or lean on them when energy is low. Most are quick wins — several need no face on camera at all."]};
+
+/* ============ IDEA COACH BANKS (all original — no overlap with the plan) ============ */
+const BANKS={
+ ideas:[
+  {t:"What I eat in a day — with a twist",p:"all",d:"Classic WIEIAD format, but end with your weekly scan so the food connects to real outcomes.",h:"What I eat in a day — and what my body scan says about it."},
+  {t:"Ranking ways to track progress",p:"tt",d:"Tier-list: mirror, scale, progress pics, tape, DEXA, phone scan. Calm, fair rankings.",h:"Ranking every way to track your body, from guesswork to gold standard."},
+  {t:"My mum tries a body scan",p:"all",d:"Scan a parent or older relative. Their honest reaction and questions are pure gold — and it widens your audience.",h:"I scanned my mum. She has questions."},
+  {t:"Scan before vs after a workout",p:"tt",d:"Curiosity experiment: does one session change anything? (Spoiler: barely — and that's a useful lesson.)",h:"I scanned myself before and after a workout. Here's what actually changed."},
+  {t:"Explaining my report to a non-gym friend",p:"ig",d:"Hand your progress report to a friend who never trains and let them react/interpret it.",h:"My mate who's never touched a dumbbell reviews my body scan."},
+  {t:"Reacting to my day-one numbers",p:"all",d:"Months later, open your very first scan and talk to that version of you.",h:"Reacting to my starting numbers, months later. Bit emotional actually."},
+  {t:"Bro-science vs my actual data",p:"tt",d:"Take one popular gym claim per video and check it against your own scan history.",h:"The gym told me one thing. My data said another."},
+  {t:"What a DEXA scan costs vs this",p:"fb",d:"Straight comparison: lab scan cost and hassle vs a phone scan whenever you like. Facts, not trash talk.",h:"I priced up a lab body scan. Then I remembered my phone does this."},
+  {t:"Setting my summer goal properly",p:"ig",d:"Use the app's goal features to plan a realistic 12-week summer timeline on camera.",h:"Planning my summer body with actual maths instead of vibes."},
+  {t:"My worst week, annotated",p:"ig",d:"Screenshot your worst week's data and calmly annotate what happened — holiday, illness, life. Normalising dips builds loyalty.",h:"Let me walk you through my worst week of data. It's fine. I'm fine."},
+  {t:"Newbie gains, caught on camera",p:"tt",d:"Month 1 vs month 2 for a beginner — the fastest progress window there is, now with numbers.",h:"They said newbie gains were real. My scans just confirmed it."},
+  {t:"BMI vs body composition",p:"fb",d:"Kind explainer on why BMI mislabels muscular people, using your own stats as the example.",h:"According to BMI I'm 'overweight'. According to my scan… let's talk."},
+  {t:"The gym bag essentials video",p:"ig",d:"Standard essentials format — lifting straps, shaker, headphones — and your phone gets its moment as the tracking tool.",h:"Everything in my gym bag actually earns its place. Including this app."},
+  {t:"Recreating my day-one scan pose",p:"ig",d:"Monthly ritual: same spot, same lighting, same pose, new numbers. A series with a built-in visual anchor.",h:"Same spot, same pose, one month apart. The numbers moved."},
+  {t:"Full scan speedrun",p:"tt",d:"Time yourself doing a complete scan as fast as possible. Silly, short, very rewatchable.",h:"Speedrunning my body scan. Personal best: 41 seconds."},
+  {t:"3 things my scan taught me",p:"fb",d:"Listicle format: three genuinely useful things the data revealed that the gym alone never did.",h:"Three things my body scan taught me that ten years of gym didn't."},
+  {t:"The holiday test",p:"all",d:"Scan before and after a week's holiday. The honest reveal calms everyone's post-holiday panic.",h:"One week all-inclusive. Let's see the damage. (It's less than you think.)"},
+  {t:"Guessing my followers' stats",p:"tt",d:"Followers send stats-free gym clips; you guess their body comp, they reveal their scan. Interactive series.",h:"You sent your gym clips. I guessed your numbers. Some of you shocked me."},
+  {t:"The 5am club, audited",p:"ig",d:"Try a trendy routine (5am starts, cold showers, whatever) for 2 weeks and let the scan judge it.",h:"I did the 5am routine for two weeks. The data has opinions."},
+  {t:"My phone knows my body better than I do",p:"all",d:"List surprising specifics the app tracks that you'd simply never measure yourself.",h:"My phone takes 12 measurements I've never once taken myself."},
+  {t:"Cut day one vs cut day thirty",p:"tt",d:"For lifters: document a cut's first month with weekly muscle-retention checks.",h:"Thirty days into the cut. Muscle status: intact. Mood: hungry."},
+  {t:"The office worker experiment",p:"fb",d:"A desk-job friend with zero gym history scans weekly while just walking more. Relatable to the biggest audience there is.",h:"No gym. Just walking. We tracked what happened."},
+  {t:"Things in fitness that are just guessing",p:"tt",d:"Gentle list: eyeballing portions, mirror checks, 'feeling leaner'… then the alternative.",h:"Half of fitness is just guessing. Here's the half that isn't."},
+  {t:"I let the app set my next goal",p:"ig",d:"Hand over control: let the app's recommendation decide your next 4-week target and document it.",h:"I let AI pick my next fitness goal. It chose… interesting."},
+  {t:"Progress report vs school report",p:"fb",d:"Nostalgic comparison: reading your weekly body report like a school report card, grades and all.",h:"My body just got its end-of-term report. Mostly B-pluses."},
+  {t:"The measurement glow-up nobody sees",p:"ig",d:"Celebrate non-scale wins the scan catches: posture, waist trend, symmetry — things photos miss.",h:"The wins nobody sees in the mirror — but the scan catches every one."},
+  {t:"Two lifters, same weight, different bodies",p:"tt",d:"You + a friend at the same body weight compare scans. Perfect demo of why weight alone means little.",h:"Same weight on the scale. Completely different bodies. Watch."},
+  {t:"A message to January-you",p:"fb",d:"Seasonal: record a video for the version of you (or your viewers) starting fresh in January, with your data as proof it works.",h:"Dear January me: here's the evidence. Keep going."},
+  {t:"App tour for the curious",p:"all",d:"Relaxed full walkthrough for everyone who's been asking in the comments. Save/pin this one.",h:"You keep asking what app this is. Full tour, no rush, here you go."},
+  {t:"The consistency scoreboard",p:"ig",d:"Show your scan streak vs your gym streak and which one actually predicts your results.",h:"My gym streak and my scan streak had a race. The winner surprised me."}
+ ],
+ easy:[
+  {t:"Screenshot + one honest sentence",p:"ig",d:"Post a single stat screenshot with one honest line as the caption. Thirty seconds of effort, real engagement — screenshots feel like receipts.",h:"This screenshot did more than my last five posts."},
+  {t:"Walk & talk voice note",p:"tt",d:"Record audio like you're leaving a mate a voice note about this week's number, over simple walking b-roll. No eye contact with a lens needed.",h:"Quick one while I walk — my scan said something interesting this week."},
+  {t:"Kettle vs scan race",p:"tt",d:"Film the kettle boiling and the scan running side by side. Which finishes first? Silly, silent, ten minutes to make.",h:"Race: my kettle vs my body scan. Go."},
+  {t:"Old photo, new understanding",p:"ig",d:"Show an old gym photo with captions about what you now know was happening (or wasn't). No new filming at all.",h:"I wish I'd had my numbers on the day this photo was taken."},
+  {t:"The lunch-break scan",p:"fb",d:"Desk, sandwich, emails, scan. A 15-second clip showing it fits inside a normal working day — speaks to every 9-to-5er.",h:"Lunch break: sandwich, emails, body scan. Back in the meeting by one."},
+  {t:"Before gym / after gym, two clips",p:"ig",d:"Two three-second clips — walking in, walking out — plus one number on screen. A whole post from six seconds of footage.",h:"Same day, two moods, one data point."},
+  {t:"Reply with a receipt",p:"tt",d:"When a comment asks 'does it actually work?', reply with a video that's just the relevant stat on screen. Comment-reply videos are the easiest content there is.",h:"You asked if it's working. Here's the receipt."},
+  {t:"Point at the graph",p:"fb",d:"Display your graph on a screen behind you and just point at bits while captions explain. Weatherman energy, zero script.",h:"This dip? Holiday. This climb? Porridge and patience."},
+  {t:"The timer test",p:"tt",d:"Put a visible stopwatch on screen and do a full scan against it. One take, no talking, satisfying to watch.",h:"Setting a timer to see how long this actually takes. Spoiler: not long."},
+  {t:"Caption-only confession",p:"ig",d:"Calm b-roll (gym bag, trainers, coffee) with a short honest text story over it — why you started tracking. No voice, no face.",h:"I started tracking because I was tired of guessing. Short story in captions."},
+  {t:"One stat, one week, one line",p:"fb",d:"A weekly repeating post: this week's single most interesting number and one sentence about it. The lowest-effort series imaginable — and it compounds.",h:"Number of the week: down 0.4%. That's it. That's the post."},
+  {t:"Screen-record the achievement",p:"tt",d:"When a badge unlocks, screen-record the moment and add one caption. The app makes the content for you.",h:"Didn't expect to feel this proud of a badge, yet here we are."}
+ ],
+ hooksBeg:[
+  "Nobody at the gym is looking at you. But if you want something to watch, watch your own numbers.",
+  "You don't need to know what a macro is to start. You just need a starting point.",
+  "Week one isn't about lifting heavy. It's about knowing where you started.",
+  "The hardest scan is the first one. Every one after that is just good news waiting.",
+  "You're not behind. You're at your baseline. There's a difference.",
+  "First month at the gym? Ignore the mirror. It's the last thing to change.",
+  "I couldn't tell if the gym was working. Then I stopped asking the mirror and asked the data.",
+  "Beginners: you're improving faster right now than you ever will again. Make sure you're measuring it.",
+  "No one gives beginners a map. So here's mine.",
+  "Your first scan isn't a test. There's no failing it.",
+  "Six months from now you'll wish you had today's numbers saved. Just saying.",
+  "Starting quietly is still starting. Track quietly too."
+ ],
+ hooksLift:[
+  "Your training log tracks the input. What's tracking the output?",
+  "Bulking without measuring muscle % is just optimistic eating.",
+  "Every lifter knows their PRs. Almost none know their actual muscle mass.",
+  "The pump is temporary. The trend line is forever.",
+  "You periodise your training. Why are you still eyeballing your physique?",
+  "Mirror checks at the gym have a margin of error of about 100%.",
+  "The most underrated lift at the gym: lifting your phone for 40 seconds a week.",
+  "You'd never guess your squat max. Stop guessing your body fat.",
+  "Cut season question: how do you KNOW you're keeping the muscle?",
+  "Serious about your physique? Then get serious about measuring it.",
+  "Your split is dialled. Your diet is dialled. Your data is… vibes?",
+  "Progressive overload for your tracking: from scale, to photos, to this."
+ ],
+ hooksTrans:[
+  "The before photo you're scared to take? The scan is easier. And kinder.",
+  "Weight loss has plateaus. Fat loss usually doesn't. Learn the difference.",
+  "You've changed more than the scale is telling you. I can almost guarantee it.",
+  "Downloaded every fitness app, kept none? This one only asks for a minute a week.",
+  "The scale measures gravity. You're trying to change composition. Wrong tool.",
+  "What if your 'failed' diet actually worked and your scale just couldn't see it?",
+  "Your body is keeping receipts of every workout. Here's how to read them.",
+  "Two kinds of people in a transformation: those guessing and those measuring.",
+  "Quietly getting healthier and nobody's noticed yet? The app noticed.",
+  "Some progress you feel before you see. Now you can see it too.",
+  "The day I stopped weighing daily was the day tracking stopped hurting.",
+  "Halfway through a transformation is exactly when the mirror lies most."
+ ],
+ formats:[
+  {t:"Green-screen your own graph",d:"Stand in front of your progress graph (green-screen effect) and narrate the story behind each dip and climb. Works on all three platforms."},
+  {t:"“Come scan with me”",d:"The GRWM format, but for your weekly scan ritual. Cosy, low-effort, infinitely repeatable — great for TikTok & Reels."},
+  {t:"Text-on-screen silent story",d:"No talking: b-roll of your training week with short on-screen captions ending on the scan result. Perfect for reaching non-English audiences too."},
+  {t:"Carousel: my month in 5 screenshots",d:"For Instagram & Facebook — 5 app screenshots with one-line captions telling the month's story. High save-rate format."},
+  {t:"Reply-to-comment videos",d:"Turn every good question in your comments into its own short video (TikTok's native reply feature). Endless idea source with built-in demand."},
+  {t:"Before-the-scan predictions",d:"On camera, predict your numbers before opening the report, then react. The gap between guess and reality is the entertainment."},
+  {t:"Split-screen: gym vs data",d:"Left side you training this week, right side the metric that training targets. Very satisfying edit for Reels."},
+  {t:"The 3-second loop",d:"Ultra-short: scan animation + one number changing + one line of text. Designed to loop and rack up rewatches on TikTok."},
+  {t:"Voice-note style confession",d:"Talk over a still or slow b-roll like you're leaving a mate a voice note about your progress. Intimate, very current format."},
+  {t:"Monthly awards show",d:"End of each month: 'best number', 'most improved measurement', 'flop of the month'. Self-aware, funny, and shows real data."}
+ ],
+ captions:[
+  "Caption: “Measured, not guessed.” — clean sign-off line for any results video.",
+  "Caption: “Week [X] of letting the data do the talking.” — perfect for series posts.",
+  "CTA: “What number would you check first — body fat or muscle? Tell me below.” — comment bait that's actually interesting.",
+  "Caption: “The mirror said maybe. The scan said yes.” — for progress reveals.",
+  "CTA: “Tag someone who still only trusts the bathroom scale.” — friendly share prompt.",
+  "Caption: “60 seconds a week. That's the whole system.” — for habit/ritual content.",
+  "Hashtag set (TikTok): #bodyscan #gymtok #progresscheck #fitnessjourney #bodycomposition",
+  "Hashtag set (Instagram): #bodycomposition #progressnotperfection #gymlife #fitnessapp #trackyourprogress",
+  "Caption: “Day one or one percent better — both count here.” — beginner-friendly warmth.",
+  "CTA: “Save this for your next check-in.” — boosts saves, which platforms reward.",
+  "Caption: “Posting the bad weeks too. That's the deal.” — trust-building sign-off.",
+  "CTA: “Drop a 📊 if you want the full breakdown next.” — light engagement prompt for follow-ups."
+ ]
+};
+
+/* ============ STORAGE ============ */
+const store={
+ get(k,fallback){try{const v=localStorage.getItem("bm-"+k);return v===null?fallback:JSON.parse(v)}catch(e){return fallback}},
+ set(k,v){try{localStorage.setItem("bm-"+k,JSON.stringify(v))}catch(e){}},
+ clearAll(){try{Object.keys(localStorage).filter(k=>k.startsWith("bm-")).forEach(k=>localStorage.removeItem(k))}catch(e){}}
+};
+
+/* ============ RENDER PLAN ============ */
+const planEl=document.getElementById("plan");
+const PNAMES={tt:"TikTok",ig:"Instagram",fb:"Facebook",all:"All platforms"};
+const ANAMES={trans:"Transformation",lift:"Lifters",beg:"Beginners",all:"Everyone"};
+const ENAMES={q:"Quick win",m:"Medium",b:"Bigger build"};
+let filter={m:0,p:"all",a:"all",e:"all"};
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+
+function buildPlan(){
+ const edits=store.get("edits",{});
+ const filmed=store.get("filmed",[]);
+ let html="";
+ [1,2,3,4].forEach(m=>{
+   const [title,desc]=MONTH_META[m];
+   html+=`<section class="month" data-m="${m}"><div class="month-head"><h2>${title}</h2><span>${desc}</span></div>`;
+   const weeks=[...new Set(PLAN.filter(x=>x.m===m).map(x=>x.w))];
+   weeks.forEach(w=>{
+     const wl=m===4?WEEK_THEMES[w]:`Week ${w} · ${WEEK_THEMES[w]}`;
+     html+=`<div class="week-label" data-w="${w}">${wl}</div><div class="grid" data-wg="${w}">`;
+     PLAN.forEach((idea,i)=>{
+       if(idea.m!==m||idea.w!==w)return;
+       const id="c"+i;
+       const ptags=idea.p.map(p=>`<span class="ptag ${p}">${PNAMES[p]}</span>`).join("");
+       const atags=idea.a.map(a=>`<span class="atag">${ANAMES[a]}</span>`).join("");
+       const etag=`<span class="etag ${idea.e}">${ENAMES[idea.e]}</span>`;
+       const e=edits[id]||{};
+       const hooks=idea.h.map((hk,j)=>`<div class="hook"><span class="hook-txt" contenteditable="true" spellcheck="false" data-e="${id}-h${j}">${esc(e[`h${j}`]??hk)}</span><button class="copy" data-copy>Copy</button></div>`).join("");
+       html+=`<article class="card${filmed.includes(id)?" filmed":""}" data-id="${id}" data-p="${idea.p.join(" ")}" data-a="${idea.a.join(" ")}" data-m="${m}" data-eff="${idea.e}">
+        <div class="card-top">${ptags}${atags}${etag}</div>
+        <h3 contenteditable="true" spellcheck="false" data-e="${id}-t">${esc(e.t??idea.t)}</h3>
+        <p class="concept" contenteditable="true" spellcheck="false" data-e="${id}-c">${esc(e.c??idea.c)}</p>
+        <div class="fmt"><b>Format:</b> ${esc(idea.f)}</div>
+        <div class="hooks-label">Hooks — pick one</div>
+        <div>${hooks}</div>
+        <div class="card-foot">
+          <button class="filmed-btn" data-film><span class="box">${filmed.includes(id)?"✓":""}</span>Filmed</button>
+          <span class="edited-dot" data-dot ${e&&Object.keys(e).length?"":"hidden"}>edited ✎</span>
+        </div>
+       </article>`;
+     });
+     html+=`</div>`;
+   });
+   html+=`</section>`;
+ });
+ planEl.innerHTML=html;
+ updateFilmedCount();
+ applyFilters();
+}
+
+function updateFilmedCount(){
+ document.getElementById("filmedCount").textContent=store.get("filmed",[]).length;
+}
+
+function applyFilters(){
+ let shown=0;
+ document.querySelectorAll(".card").forEach(card=>{
+   const okM=filter.m===0||+card.dataset.m===filter.m;
+   const ps=card.dataset.p.split(" ");
+   const okP=filter.p==="all"||ps.includes(filter.p)||ps.includes("all");
+   const as=card.dataset.a.split(" ");
+   const okA=filter.a==="all"||as.includes(filter.a)||as.includes("all");
+   const okE=filter.e==="all"||card.dataset.eff===filter.e;
+   const ok=okM&&okP&&okA&&okE;
+   card.style.display=ok?"":"none";
+   if(ok)shown++;
+ });
+ document.querySelectorAll(".grid").forEach(g=>{
+   const any=[...g.children].some(c=>c.style.display!=="none");
+   g.style.display=any?"":"none";
+   g.previousElementSibling.style.display=any?"":"none";
+ });
+ document.querySelectorAll(".month").forEach(s=>{
+   const any=[...s.querySelectorAll(".card")].some(c=>c.style.display!=="none");
+   s.style.display=any?"":"none";
+ });
+ document.getElementById("showCount").textContent=shown;
+ document.getElementById("empty").hidden=shown>0;
+}
+
+/* filter chips */
+[["monthFilters","m"],["platFilters","p"],["audFilters","a"],["effFilters","e"]].forEach(([id,key])=>{
+ document.getElementById(id).addEventListener("click",e=>{
+   const btn=e.target.closest(".chip");if(!btn)return;
+   document.querySelectorAll(`#${id} .chip`).forEach(c=>c.classList.remove("on"));
+   btn.classList.add("on");
+   filter[key]=key==="m"?+btn.dataset.m:btn.dataset[key];
+   applyFilters();
+ });
+});
+
+/* card interactions: edit, copy, filmed */
+planEl.addEventListener("input",e=>{
+ const el=e.target.closest("[data-e]");if(!el)return;
+ const [id,field]=[el.dataset.e.slice(0,el.dataset.e.lastIndexOf("-")),el.dataset.e.slice(el.dataset.e.lastIndexOf("-")+1)];
+ const edits=store.get("edits",{});
+ edits[id]=edits[id]||{};
+ edits[id][field]=el.innerText;
+ store.set("edits",edits);
+ const dot=el.closest(".card").querySelector("[data-dot]");if(dot)dot.hidden=false;
+});
+planEl.addEventListener("click",e=>{
+ const cp=e.target.closest("[data-copy]");
+ if(cp){
+   const txt=cp.previousElementSibling.innerText.trim();
+   (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>{
+     cp.textContent="Copied!";cp.classList.add("done");
+     setTimeout(()=>{cp.textContent="Copy";cp.classList.remove("done")},1400);
+   }).catch(()=>{
+     const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
+     try{document.execCommand("copy")}catch(_){}
+     ta.remove();cp.textContent="Copied!";setTimeout(()=>cp.textContent="Copy",1400);
+   });
+   return;
+ }
+ const fb=e.target.closest("[data-film]");
+ if(fb){
+   const card=fb.closest(".card");const id=card.dataset.id;
+   let filmed=store.get("filmed",[]);
+   if(filmed.includes(id)){filmed=filmed.filter(x=>x!==id);card.classList.remove("filmed");fb.querySelector(".box").textContent="";}
+   else{filmed.push(id);card.classList.add("filmed");fb.querySelector(".box").textContent="✓";}
+   store.set("filmed",filmed);
+   updateFilmedCount();
+ }
+});
+
+document.getElementById("resetBtn").addEventListener("click",()=>{
+ if(confirm("Reset all your edits, ticks and chat history on this device?")){store.clearAll();location.reload();}
+});
+
+/* ============ IDEA COACH ============ */
+const sheet=document.getElementById("sheet"),msgs=document.getElementById("msgs"),quick=document.getElementById("quick"),chatIn=document.getElementById("chatIn");
+const QUICKS=[["More video ideas","ideas"],["Low-effort ideas","easy"],["Hooks: beginners","hooksBeg"],["Hooks: lifters","hooksLift"],["Hooks: transformation","hooksTrans"],["Trend formats","formats"],["Captions & CTAs","captions"],["Surprise me","surprise"]];
+quick.innerHTML=QUICKS.map(([label,key])=>`<button class="qbtn" data-q="${key}">${label}</button>`).join("");
+
+function addMsg(txt,who){
+ const d=document.createElement("div");d.className="msg "+who;d.textContent=txt;
+ msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;
+}
+function addIdeaCard(item,bank){
+ const d=document.createElement("div");d.className="idea-card";
+ if(bank==="ideas"||bank==="easy"){
+   const pl=item.p==="all"?`<span class="ptag all">All platforms</span>`:`<span class="ptag ${item.p}">${PNAMES[item.p]}</span>`;
+   d.innerHTML=`<div class="ic-top">${pl}</div><b>${esc(item.t)}</b><p>${esc(item.d)}</p><div class="ic-hook"><span>${esc(item.h)}</span><button class="copy" data-chip-copy>Copy</button></div>`;
+ }else if(bank==="formats"){
+   d.innerHTML=`<b>${esc(item.t)}</b><p>${esc(item.d)}</p>`;
+ }else{
+   d.innerHTML=`<div class="ic-hook"><span>${esc(item)}</span><button class="copy" data-chip-copy>Copy</button></div>`;
+ }
+ msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
+msgs.addEventListener("click",e=>{
+ const b=e.target.closest("[data-chip-copy]");if(!b)return;
+ const txt=b.previousElementSibling.textContent.trim();
+ (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>{
+   b.textContent="Copied!";b.classList.add("done");setTimeout(()=>{b.textContent="Copy";b.classList.remove("done")},1400);
+ }).catch(()=>{});
+});
+
+function serve(bank,n){
+ const used=store.get("used-"+bank,[]);
+ const pool=BANKS[bank].map((_,i)=>i).filter(i=>!used.includes(i));
+ if(pool.length===0)return null;
+ const pick=[];
+ while(pick.length<Math.min(n,pool.length)){
+   const idx=pool.splice(Math.floor(Math.random()*pool.length),1)[0];
+   pick.push(idx);
+ }
+ store.set("used-"+bank,used.concat(pick));
+ return pick.map(i=>BANKS[bank][i]);
+}
+function remaining(bank){return BANKS[bank].length-store.get("used-"+bank,[]).length}
+
+const BANK_LABEL={ideas:"video ideas",easy:"low-effort ideas",hooksBeg:"beginner hooks",hooksLift:"lifter hooks",hooksTrans:"transformation hooks",formats:"trend formats",captions:"captions & CTAs"};
+const DRY={
+ ideas:"You've now seen every one of my 30 bonus video ideas — nothing repeated, as promised. Try the low-effort pack or a hook pack, or remix: take any filmed idea and redo it as a Part 2, a duet, or from your gym buddy's point of view.",
+ easy:"That's all 12 of my low-effort ideas served. Remember: any idea in the main plan can be made low-effort — drop the talking, use captions over b-roll, and post the same clip everywhere.",
+ hooksBeg:"That's all 12 of my original beginner hooks used up. Try the lifter or transformation packs — many of those can be softened for beginners by swapping the intensity down a notch.",
+ hooksLift:"You've drawn all 12 lifter hooks. The transformation pack crosses over well for lifters on a cut, or ask me for 'formats' to reframe an old hook in a new format.",
+ hooksTrans:"All 12 transformation hooks served. The beginner pack shares a lot of DNA — or take your favourite used hook and flip it into a question to make it fresh again.",
+ formats:"That's every trend format in my pack. Combine two — e.g. 'green-screen graph' + 'monthly awards show' — and you've got a brand-new format nobody else is doing.",
+ captions:"You've collected every caption and CTA I hold. Pro tip: rotate them — a caption that ran 6 weeks ago is new again to 95% of your audience."
+};
+
+function botReply(bank){
+ const typing=addMsg("","bot");typing.innerHTML='<span class="typing"><i></i><i></i><i></i></span>';
+ setTimeout(()=>{
+   typing.remove();
+   if(bank==="surprise"){
+     const banks=["ideas","easy","hooksBeg","hooksLift","hooksTrans","formats","captions"].filter(b=>remaining(b)>0);
+     if(banks.length===0){addMsg("Incredible — you've genuinely emptied every single pack I have. Time to film!","bot");return;}
+     bank=banks[Math.floor(Math.random()*banks.length)];
+   }
+   const items=serve(bank,3);
+   if(!items){addMsg(DRY[bank],"bot");return;}
+   const intros={
+     ideas:["Fresh ones, never shown before:","Here you go — three brand-new ideas:","Straight from the vault:"],
+     easy:["Minimal effort, real results — no faces required for most of these:","For the low-energy days:","Easy wins, coming up:"],
+     hooksBeg:["Beginner-friendly and gentle, as requested:","For the new starters:","Warm ones for week-one people:"],
+     hooksLift:["For the numbers-obsessed:","Lifter hooks, coming up:","For the ones who log every set:"],
+     hooksTrans:["For the journey-documenters:","Transformation hooks, fresh batch:","For the before-and-after crowd:"],
+     formats:["Formats you can pour any idea into:","Try one of these shapes:","Format inspiration:"],
+     captions:["Copy-paste ready:","For your captions:","Caption toolkit:"]
+   };
+   addMsg(intros[bank][Math.floor(Math.random()*intros[bank].length)],"bot");
+   items.forEach(it=>addIdeaCard(it,bank));
+   const rem=remaining(bank);
+   addMsg(rem>0?`(${rem} more original ${BANK_LABEL[bank]} left in this pack — I never repeat one.)`:`(That was the last of my ${BANK_LABEL[bank]}! Everything served, nothing repeated.)`,"bot");
+ },650);
+}
+
+function route(text){
+ const t=text.toLowerCase();
+ if(/easy|lazy|quick|faceless|no face|camera.?shy|simple|low.?effort|can'?t be bothered|tired/.test(t))return botReply("easy");
+ if(/beginn|newbie|new to|starter|nervous/.test(t))return botReply("hooksBeg");
+ if(/lift|bulk|cut|muscle|bodybuild|strong|gains/.test(t))return botReply("hooksLift");
+ if(/transform|weight ?loss|fat ?loss|journey|before/.test(t))return botReply("hooksTrans");
+ if(/caption|cta|hashtag|description/.test(t))return botReply("captions");
+ if(/format|trend|style|shape|edit/.test(t))return botReply("formats");
+ if(/hook/.test(t)){
+   const banks=["hooksBeg","hooksLift","hooksTrans"].filter(b=>remaining(b)>0);
+   return botReply(banks.length?banks[Math.floor(Math.random()*banks.length)]:"hooksBeg");
+ }
+ if(/idea|video|content|more|another|film|post/.test(t))return botReply("ideas");
+ if(/surprise|random|anything|whatever/.test(t))return botReply("surprise");
+ if(/change|rewrite|reword/.test(t)){
+   const typing=addMsg("","bot");typing.innerHTML='<span class="typing"><i></i><i></i><i></i></span>';
+   setTimeout(()=>{typing.remove();addMsg("To change anything in the plan itself, just tap the text — every title, concept and hook is directly editable and saves automatically on your device. Want fresh material instead? Try the buttons below.","bot")},600);
+   return;
+ }
+ if(/left|remaining|how many/.test(t)){
+   const typing=addMsg("","bot");typing.innerHTML='<span class="typing"><i></i><i></i><i></i></span>';
+   setTimeout(()=>{typing.remove();addMsg(`Still in the vault for you:\n• ${remaining("ideas")} video ideas\n• ${remaining("easy")} low-effort ideas\n• ${remaining("hooksBeg")} beginner hooks\n• ${remaining("hooksLift")} lifter hooks\n• ${remaining("hooksTrans")} transformation hooks\n• ${remaining("formats")} trend formats\n• ${remaining("captions")} captions & CTAs`,"bot")},600);
+   return;
+ }
+ const typing=addMsg("","bot");typing.innerHTML='<span class="typing"><i></i><i></i><i></i></span>';
+ setTimeout(()=>{typing.remove();addMsg("I can hand you: more video ideas, low-effort ideas (no face needed), hooks (beginners / lifters / transformation), trend formats, or captions & CTAs — all original, never repeated. Tap a button below or just ask, e.g. “easy ideas for this week”.","bot")},600);
+}
+
+quick.addEventListener("click",e=>{
+ const b=e.target.closest(".qbtn");if(!b)return;
+ addMsg(b.textContent,"user");
+ botReply(b.dataset.q);
+});
+function sendTyped(){
+ const v=chatIn.value.trim();if(!v)return;
+ chatIn.value="";addMsg(v,"user");route(v);
+}
+document.getElementById("sendBtn").addEventListener("click",sendTyped);
+chatIn.addEventListener("keydown",e=>{if(e.key==="Enter")sendTyped()});
+
+let greeted=false;
+document.getElementById("fabBtn").addEventListener("click",()=>{
+ sheet.classList.add("open");
+ if(!greeted){
+   greeted=true;
+   setTimeout(()=>addMsg("Hey! I'm the Idea Coach for Body Mirror AI. I hold 100+ extra original ideas, hooks, formats and captions — including a whole pack of low-effort, no-face-needed ideas for the days you can't be bothered. I never serve the same one twice, even if you come back tomorrow. What do you need?","bot"),250);
+ }
+ setTimeout(()=>chatIn.focus(),300);
+});
+document.getElementById("closeBtn").addEventListener("click",()=>sheet.classList.remove("open"));
+sheet.addEventListener("click",e=>{if(e.target===sheet)sheet.classList.remove("open")});
+
+buildPlan();
+</script>
+
+</body>
+</html>
