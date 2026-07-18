@@ -94,7 +94,14 @@
   .chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:6px;padding:5px 12px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:var(--body)}
   .chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
   .chip:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-  .count-row{display:flex;align-items:center;gap:10px;margin-top:9px;flex-wrap:wrap}
+  .count-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .frow:first-of-type{margin-top:8px}
+  .ftoggle{display:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--body)}
+  @media(max-width:719px){
+    .ftoggle{display:inline-block}
+    .filters .frow{display:none}
+    .filters.expanded .frow{display:flex}
+  }
   .count-note{font-size:12.5px;color:var(--muted)}
   .count-note b{color:var(--ink);font-variant-numeric:tabular-nums}
   .dice{border:1px solid var(--ink);background:var(--surface);color:var(--ink);border-radius:6px;padding:6px 13px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--body);margin-left:auto}
@@ -305,7 +312,12 @@
     </details>
   </header>
 
-  <div class="filters">
+  <div class="filters" id="fbar">
+    <div class="count-row">
+      <button class="ftoggle" id="fltToggle">Filters</button>
+      <div class="count-note">Showing <b id="showCount">66</b> ideas</div>
+      <button class="dice" id="diceBtn">Pick one for me</button>
+    </div>
     <div class="frow" id="monthFilters">
       <span class="flabel">Month</span>
       <button class="chip on" data-m="0">All</button>
@@ -334,10 +346,6 @@
       <button class="chip" data-e="q">Quick win</button>
       <button class="chip" data-e="m">Medium</button>
       <button class="chip" data-e="b">Bigger build</button>
-    </div>
-    <div class="count-row">
-      <div class="count-note">Showing <b id="showCount">66</b> ideas</div>
-      <button class="dice" id="diceBtn">Pick one for me</button>
     </div>
   </div>
 
@@ -1023,7 +1031,19 @@ function applyFilters(){
  });
  document.getElementById("showCount").textContent=shown;
  document.getElementById("empty").hidden=shown>0;
+ updateFltLabel();
 }
+
+/* mobile filter toggle */
+const fbarEl=document.getElementById("fbar"),fltBtn=document.getElementById("fltToggle");
+function updateFltLabel(){
+ const active=(filter.m!==0?1:0)+(filter.p!=="all"?1:0)+(filter.a!=="all"?1:0)+(filter.e!=="all"?1:0);
+ fltBtn.textContent=fbarEl.classList.contains("expanded")?"Hide filters":(active?`Filters · ${active} on`:"Filters");
+}
+fltBtn.addEventListener("click",()=>{
+ fbarEl.classList.toggle("expanded");
+ updateFltLabel();
+});
 
 /* filter chips */
 [["monthFilters","m"],["platFilters","p"],["audFilters","a"],["effFilters","e"]].forEach(([id,key])=>{
@@ -1033,6 +1053,7 @@ function applyFilters(){
    btn.classList.add("on");
    filter[key]=key==="m"?+btn.dataset.m:btn.dataset[key];
    applyFilters();
+   if(matchMedia("(max-width:719px)").matches){fbarEl.classList.remove("expanded");updateFltLabel();}
  });
 });
 
