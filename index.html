@@ -98,9 +98,12 @@
   .frow:first-of-type{margin-top:8px}
   .ftoggle{display:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--body)}
   @media(max-width:719px){
-    .ftoggle{display:inline-block}
+    .ftoggle{display:block;flex:1;padding:13px 14px;font-size:15.5px;text-align:center}
+    .filters .dice{flex:1;padding:13px 14px;font-size:15.5px;margin-left:0}
+    .count-note{width:100%;order:3;text-align:center}
     .filters .frow{display:none}
     .filters.expanded .frow{display:flex}
+    .filters .chip{padding:9px 14px;font-size:14.5px}
   }
   .count-note{font-size:12.5px;color:var(--muted)}
   .count-note b{color:var(--ink);font-variant-numeric:tabular-nums}
